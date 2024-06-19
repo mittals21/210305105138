@@ -14,63 +14,63 @@ const Home = () => {
   const productsForFiltering = [
     {
       productName: category,
-      price: 2253,
+      price: 5465,
       rating: 4.6,
-      discount: 50,
+      discount: 508,
       company: company,
       availability: "out-of-stock",
     },
     {
       productName: category,
-      price: 2253,
+      price: 8989,
       rating: 4.0,
       company: company,
-      discount: 50,
+      discount: 890,
       availability: "out-of-stock",
     },
     {
       productName: category,
-      price: 2253,
+      price: 8989,
       rating: 4.6,
-      discount: 50,
+      discount: 990,
       company: company,
       availability: "yes",
     },
     {
       productName: category,
-      price: 2253,
+      price: 8989,
       rating: 4.6,
       company: company,
-      discount: 50,
+      discount: 880,
       availability: "out-of-stock",
     },
     {
       productName: category,
-      price: 2253,
+      price: 550,
       company: company,
       rating: 4.6,
-      discount: 50,
+      discount: 330,
       availability: "yes",
     },
     {
       productName: category,
-      price: 2253,
+      price: 6000,
       rating: 1.1,
-      discount: 50,
+      discount: 520,
       availability: "yes",
       company: company,
     },
     {
       productName: category,
-      price: 2253,
+      price: 3434,
       rating: 4.6,
-      discount: 50,
+      discount: 450,
       company: company,
       availability: "yes",
     },
     {
       productName: category,
-      price: 2253,
+      price: 5456,
       rating: 4.6,
       company: company,
       discount: 50,
@@ -78,7 +78,7 @@ const Home = () => {
     },
     {
       productName: category,
-      price: 2253,
+      price: 6546,
       rating: 4.9,
       discount: 50,
       company: company,
@@ -86,7 +86,7 @@ const Home = () => {
     },
     {
       productName: category,
-      price: 2253,
+      price: 2321,
       rating: 4.6,
       discount: 50,
       company: company,
@@ -94,7 +94,7 @@ const Home = () => {
     },
     {
       productName: category,
-      price: 2253,
+      price: 5645,
       rating: 4.6,
       discount: 50,
       company: company,
@@ -102,7 +102,7 @@ const Home = () => {
     },
     {
       productName: category,
-      price: 2253,
+      price: 4655,
       rating: 2.8,
       company: company,
       discount: 50,
@@ -110,7 +110,7 @@ const Home = () => {
     },
     {
       productName: category,
-      price: 2253,
+      price: 5131,
       company: company,
       rating: 4.6,
       discount: 50,
@@ -118,50 +118,50 @@ const Home = () => {
     },
     {
       productName: category,
-      price: 2253,
+      price: 5646,
       rating: 4.6,
       company: company,
-      discount: 50,
+      discount: 250,
       availability: "out-of-stock",
     },
     {
       productName: category,
-      price: 2253,
+      price: 32112,
       rating: 0.5,
       company: company,
-      discount: 50,
+      discount: 510,
       availability: "yes",
     },
     {
       productName: category,
-      price: 2253,
+      price: 5465,
       rating: 2.7,
-      discount: 50,
+      discount: 750,
       company: company,
       availability: "yes",
     },
     {
       productName: category,
-      price: 2253,
+      price: 5465,
       rating: 1.2,
       company: company,
-      discount: 50,
+      discount: 520,
       availability: "yes",
     },
     {
       productName: category,
-      price: 2253,
+      price: 5465,
       rating: 3.0,
       company: company,
-      discount: 50,
+      discount: 590,
       availability: "out-of-stock",
     },
     {
       productName: category,
-      price: 2253,
+      price: 5465,
       rating: 1.6,
       company: company,
-      discount: 50,
+      discount: 600,
       availability: "yes",
     },
   ]
@@ -221,7 +221,8 @@ const Home = () => {
 
   return (
     <div className="py-10">
-      <div className="px-10 pb-10">
+     <div className="flex flex-col justify-center items-start bg-slate-300 rounded-lg m-6">
+     <div className="px-10 pb-10">
         <p className="font-bold text-3xl my-5">Filter based on COMPANIES</p>
         <div className="px-5 flex justify-center items-center flex-wrap gap-x-10 gap-y-3">
           {companies?.map((c) => (
@@ -298,9 +299,16 @@ const Home = () => {
           <label htmlFor="not_available">not_available</label>
         </div>
       </div>
+     </div>
 
-      <button onClick={filterData}>APPLY FILTERS</button>
-
+      <div className="flex justify-center p-8">
+        <button
+          onClick={filterData}
+          className="border-black border-[2px] rounded-md p-4 bg-blue-500 "
+        >
+          APPLY FILTERS
+        </button>
+      </div>
       <div className="flex h-screen items-center justify-center flex-wrap gap-20">
         {data?.length === 0 ? (
           <div>No Products Available</div>
@@ -311,15 +319,15 @@ const Home = () => {
                 navigate(`/${d?.productName}`, { state: { productData: d } })
               }
               key={index}
-              className="border rounded-xl shadow-xl p-10 cursor-pointer transition-all duration-200 ease-linear hover:scale-110"
+              className="border-slate-700 border-[2px] rounded-xl shadow-xl p-8 cursor-pointer transition-all duration-200 ease-linear hover:scale-110"
             >
               <div className="relative">
                 <img
-                  className="rounded-md shadow-md w-[200px]"
+                  className="rounded-md border-slate-700 border-[2px] w-[200px]"
                   src={productImage}
                   alt=""
                 />
-                <p className="absolute bg-[#000000d7] text-white rounded-lg font-semibold tracking-widest text-xs px-3 py-2 -top-4 -right-8">
+                <p className="absolute bg-[#ffffff] text-black rounded-lg font-semibold tracking-widest text-xs px-3 py-2 -top-4 -right-8">
                   ₹{d?.discount}/- off
                 </p>
               </div>
